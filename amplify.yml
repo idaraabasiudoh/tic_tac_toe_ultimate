@@ -22,7 +22,7 @@ frontend:
       commands:
         - echo "Deployment complete"
   artifacts:
-    baseDirectory: build/web
+    baseDirectory: /build/web
     files:
       - '**/*'
   cache:
