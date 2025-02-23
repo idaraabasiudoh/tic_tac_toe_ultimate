@@ -1,7 +1,7 @@
 # Serverless Multiplayer Advanced Tic-Tac-Toe (81-Tiles)
 
 ## Overview
-This project is an advanced version of the traditional Tic-Tac-Toe game. It transforms a previously developed school project into a fully functional and serverless multiplayer web game with an advanced **((3 x 3) x (3 x 3))** 81-tile version. The game is designed to be **10x more strategic, complex, and mentally demanding** than the original **(3 x 3)** 9-tile version.
+This project is an advanced version of the traditional Tic-Tac-Toe game. It transforms a previously developed project into a fully functional and serverless multiplayer web game with an advanced **((3 x 3) x (3 x 3))** 81-tile version. The game is designed to be **10x more strategic, complex, and mentally demanding** than the original **(3 x 3)** 9-tile version.
 
 ## Features
 - **Advanced Gameplay:** An expanded grid layout that increases the complexity of the game, adding strategic depth to traditional Tic-Tac-Toe.
