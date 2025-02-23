@@ -1,0 +1,29 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Installing Flutter SDK"
+        - git clone https://github.com/flutter/flutter.git -b stable --depth 1
+        - export PATH="$PATH:$(pwd)/flutter/bin"
+        - flutter config --no-analytics
+        - flutter doctor
+        - echo "Installing dependencies"
+        - flutter pub get
+        - echo "Loading environment variables"
+        - echo "SUPABASE_URL=$SUPABASE_URL" > .env
+        - echo "SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY" >> .env
+    build:
+      commands:
+        - echo "Building Flutter web application"
+        - flutter build web --release
+    postBuild:
+      commands:
+        - echo "Deployment complete"
+  artifacts:
+    baseDirectory: build/web
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - flutter/.pub-cache
