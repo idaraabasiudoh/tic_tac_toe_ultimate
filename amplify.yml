@@ -4,7 +4,8 @@ frontend:
     preBuild:
       commands:
         - echo "Installing Flutter SDK"
-        - git clone https://github.com/flutter/flutter.git -b stable --depth 1
+        - wget -qO flutter.tar.xz "https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.19.0-stable.tar.xz"
+        - tar xf flutter.tar.xz
         - export PATH="$PATH:$(pwd)/flutter/bin"
         - flutter config --no-analytics
         - flutter doctor
