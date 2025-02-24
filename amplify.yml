@@ -18,7 +18,7 @@ frontend:
       commands:
         - echo "Building Flutter web application"
         #- flutter build web --release
-        - flutter build web --web-renderer html
+        - flutter build web
 
     postBuild:
       commands:
